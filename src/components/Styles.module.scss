@@ -1,0 +1,41 @@
+.Carousel {
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.Carousel button {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Carousel button svg {
+    padding: 10px;
+    transform: scale(1);
+    transition: transform 0.4s cubic-bezier(0.07, 1.15, 1, 1);
+}
+
+.Carousel button:hover svg {
+    padding: 10px;
+    transform: scale(1.2);
+}
+
+.CarouselPath {
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    height: 90%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgb(105, 105, 105);
+}
