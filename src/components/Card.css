@@ -1,29 +1,45 @@
 element {
-    --bh: ;
-    --ah: ;
+  --bh: ;
+  --ah: ;
 }
 
 .Card {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0%;
-    position: absolute;
-    background: var(--bh);
-    z-index: 0;
-    transition: all 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Mali", cursive;
+  text-align: center;
+  opacity: 0;
+  z-index: -1;
+  background-image: var(--bh);
+  box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.159);
+  transition: all 0.5s ease-in-out;
 }
 
 .Card_Active {
-    z-index: 10;
-    opacity: 100%;
-    transition: all 0.5s ease-in-out;
+  opacity: 1;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
 }
 
-.Card_Active:hover {
-    background: var(--ah);
+.Card_Active::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: var(--ah);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.5s linear;
+}
+
+.Card_Active:hover::before {
+  opacity: 1;
 }
