@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { getData, getLength } from "./Model.js";
-import Card from "./Card";
-import LeftIcon from "./Assets/LeftCarouselIcon";
-import RightIcon from "./Assets/RightCarouselIcon";
-import "./Styles.css";
+import { getData, getLength } from "../Model.js";
+import Card from "../UI/Card";
+import LeftIcon from "../Assets/LeftCarouselIcon";
+import RightIcon from "../Assets/RightCarouselIcon";
+import "./Carousel.css";
 
 const Carousel = (props) => {
   let index = 0;
